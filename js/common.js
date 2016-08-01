@@ -20,7 +20,7 @@ $( window ).resize(function() {
 
     $('.aside_catalog li').on('click', function() {
         $(this)
-            .children('ul').hide(300);
+            .children('ul').slideToggle(200);
         $(this)
             .toggleClass('open');
     });
