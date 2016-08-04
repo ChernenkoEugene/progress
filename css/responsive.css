@@ -110,9 +110,14 @@
     .trow_big {
         width: 76px;
     }
+    .catalog_lines_list li {
+        width: 168px;
+        margin-right: 14px;
+        margin-bottom: 18px;
+    }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
     .mobile_catalog_img {
         display: block;
     }
@@ -265,6 +270,12 @@
     .tr_name_img {
         width: 60px;
     }
+    .cont_block {
+        width: 47%;
+        margin-right: 12px;
+        padding: 15px;
+    }
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -572,11 +583,31 @@
         font-size: 12px;
     }
     .selects_list .select_view {
-    width: 110px;
-}
-.catalog_coubs_table {
-    font-size: 10px;
-}
+        width: 110px;
+    }
+    .catalog_coubs_table {
+        font-size: 10px;
+    }
+    .catalog_lines_list li {
+        width: 30%;
+        padding-bottom: 25px;
+    }
+    .catalog_lines_list li:nth-child(4n) {
+        margin-right: 14px;
+    }
+    .catalog_lines_list li:nth-child(3n) {
+        margin-right: 0;
+    }
+    .catalog_lines_name {
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+    .catalog_lines_price {
+        font-size: 14px;
+    }
+    .catalog_lines_list__img {
+        max-width: 80px;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -906,6 +937,18 @@
     .cart_table_th .cart_table_th_summ {
         width: 80px;
     }
+    .cont_block {
+        width: 90%;
+    }
+    .cont_btns button {
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;}
+        .map_block {
+            margin-bottom: 40px;
+        }
 }
 
 @media only screen and (max-width: 480px) {
@@ -995,6 +1038,13 @@
     }
     .cart_table {
         margin-top: 10px;
+    }
+    .catalog_lines_list li {
+        margin-right: 10px;
+        margin-bottom: 14px;
+    }
+    .catalog_lines_list li:nth-child(4n) {
+        margin-right: 10px;
     }
 }
 
@@ -1120,6 +1170,21 @@
     .cart_table_th .cart_table_th_quan {
         width: 40px;
     }
+    .catalog_lines_list li {
+        margin-right: 6px;
+        margin-bottom: 10px;
+    }
+    .catalog_lines_list li:nth-child(4n) {
+        margin-right: 6px;
+    }
+    .catalog_lines_list li {
+        width: 31%;
+        padding-top: 10px;
+    }
+    button.catalog_lines_buy {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
 }
 
 @media only screen and (max-width: 360px) {
@@ -1165,6 +1230,23 @@
     .orders_table_th_order,
     .orders_table_tr_order {
         width: 53px;
+    }
+    .catalog_lines_list li {
+        width: 31%;
+        padding-top: 10px;
+    }
+    button.catalog_lines_buy {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .catalog_lines_list .info {
+        width: 26px;
+    }
+    .catalog_lines_name {
+        width: 100%;
+    }
+    .cont_block {
+        width: 100%;
     }
 }
 
