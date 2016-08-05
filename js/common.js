@@ -1,21 +1,21 @@
 $(document).ready(function() {
 
-if($( window ).width() < 480) {
-     $(".my_cabinet_nav_list .my_cabinet_manager a").html("Менеджер");
-  }
-$( window ).resize(function() {
- if($( window ).width() < 480) {
-     $(".my_cabinet_nav_list .my_cabinet_manager a").html("Менеджер");
-  }
-  });
-  if($( window ).width() < 560) {
-     $(".cart_table_th .cart_table_th_quan").html("Кол-во");
-  }
-$( window ).resize(function() {
- if($( window ).width() < 560) {
-     $(".cart_table_th .cart_table_th_quan").html("Кол-во");
-  }
-});
+    if ($(window).width() < 480) {
+        $(".my_cabinet_nav_list .my_cabinet_manager a").html("Менеджер");
+    }
+    $(window).resize(function() {
+        if ($(window).width() < 480) {
+            $(".my_cabinet_nav_list .my_cabinet_manager a").html("Менеджер");
+        }
+    });
+    if ($(window).width() < 560) {
+        $(".cart_table_th .cart_table_th_quan").html("Кол-во");
+    }
+    $(window).resize(function() {
+        if ($(window).width() < 560) {
+            $(".cart_table_th .cart_table_th_quan").html("Кол-во");
+        }
+    });
     //---submenu---
 
     $('.aside_catalog li').on('click', function() {
@@ -56,41 +56,53 @@ $( window ).resize(function() {
         $('.top_head').toggleClass('open');
     });
 
- //---orders---
+    //---orders---
 
     $('.orders_table_tr_order a').on('click', function() {
         $(this)
-             .parent().siblings('.order_details').slideToggle(300);
-        
+            .parent().siblings('.order_details').slideToggle(300);
+
     });
 
-//---customize input type number---
-$(function() {
-  
-  $("#spin .button").on("click", function() {
+    //---customize input type number---
+    $(function() {
 
-    var $button = $(this);
-    var oldValue = $button.parent().find("input").val();
+        $("#spin .button").on("click", function() {
 
-    if ($button.text() == "+") {
-      var newVal = parseFloat(oldValue) + 1;
-    } else {
-       // Don't allow decrementing below zero
-      if (oldValue > 0) {
-        var newVal = parseFloat(oldValue) - 1;
-        } else {
-        newVal = 0;
-        }
-      }
-    $button.parent().find("input").val(newVal);
-  });
-});
+            var $button = $(this);
+            var oldValue = $button.parent().find("input").val();
+
+            if ($button.text() == "+") {
+                var newVal = parseFloat(oldValue) + 1;
+            } else {
+                // Don't allow decrementing below zero
+                if (oldValue > 0) {
+                    var newVal = parseFloat(oldValue) - 1;
+                } else {
+                    newVal = 0;
+                }
+            }
+            $button.parent().find("input").val(newVal);
+        });
+    });
 
 
-if($( window ).width() < 751) {
-     $('.cart_aside_order .order_dismiss').insertBefore('.cart_aside_order .order_tot_summ');
-  }
+    if ($(window).width() < 751) {
+        $('.cart_aside_order .order_dismiss').insertBefore('.cart_aside_order .order_tot_summ');
+    }
 
+    //tabs
+    (function($) {
+        $(function() {
+
+            $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+                $(this)
+                    .addClass('active').siblings().removeClass('active')
+                    .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+            });
+
+        });
+    })(jQuery);
 
 
     $(".fancybox").fancybox();
