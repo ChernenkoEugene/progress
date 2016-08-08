@@ -104,6 +104,9 @@ $(document).ready(function() {
         });
     })(jQuery);
 
+if ($(window).width() < 768) {
+        $('.product_main .tabs__content').insertBefore('.product_main .tabs__caption');
+    }
 
     $(".fancybox").fancybox();
 
